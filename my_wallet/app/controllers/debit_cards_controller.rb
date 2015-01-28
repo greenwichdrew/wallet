@@ -5,6 +5,11 @@ class DebitCardsController < ApplicationController
   # GET /debit_cards.json
   def index
     @debit_cards = DebitCard.all
+    @total_amount =DebitCard.total
+    @transaction_number = @debit_cards.length
+    if @total_amount <= 50
+      @bad_total = "WTF new shoes, now you can't pay the mortgage!!"
+    end
   end
 
   # GET /debit_cards/1

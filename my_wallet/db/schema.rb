@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128185927) do
+ActiveRecord::Schema.define(version: 20150128200657) do
 
   create_table "debit_cards", force: :cascade do |t|
     t.float    "deposits"
     t.float    "withdraws"
-    t.float    "balance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

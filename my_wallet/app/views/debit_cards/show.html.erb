@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Transaction number:</strong>
-  <%= @debit_card.transaction_number %>
-</p>
-
-<p>
   <strong>Deposits:</strong>
   <%= @debit_card.deposits %>
 </p>
@@ -13,11 +8,6 @@
 <p>
   <strong>Withdraws:</strong>
   <%= @debit_card.withdraws %>
-</p>
-
-<p>
-  <strong>Balance:</strong>
-  <%= @debit_card.balance %>
 </p>
 
 <%= link_to 'Edit', edit_debit_card_path(@debit_card) %> |

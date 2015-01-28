@@ -1,14 +1,14 @@
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Debit Cards</h1>
+<h1>Debitcard Transactions</h1>
+<h2>Adjust Debit Card balance click Debit Card below</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Transaction number</th>
       <th>Deposits</th>
       <th>Withdraws</th>
-      <th>Balance</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,8 @@
   <tbody>
     <% @debit_cards.each do |debit_card| %>
       <tr>
-        <td><%= debit_card.transaction_number %></td>
         <td><%= debit_card.deposits %></td>
         <td><%= debit_card.withdraws %></td>
-        <td><%= debit_card.balance %></td>
         <td><%= link_to 'Show', debit_card %></td>
         <td><%= link_to 'Edit', edit_debit_card_path(debit_card) %></td>
         <td><%= link_to 'Destroy', debit_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,4 +28,9 @@
 
 <br>
 
-<%= link_to 'New Debit card', new_debit_card_path %>
+<%= link_to 'Debit Card', new_debit_card_path %>
+<div>
+  <p>Your running balance is:<%= @total_amount %><p>
+  <p>Your total transactions are:<%= @transaction_number %><p>
+  <p><%= @bad_total %><p>
+<div>

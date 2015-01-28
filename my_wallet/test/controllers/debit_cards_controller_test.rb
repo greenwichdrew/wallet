@@ -18,7 +18,7 @@ class DebitCardsControllerTest < ActionController::TestCase
 
   test "should create debit_card" do
     assert_difference('DebitCard.count') do
-      post :create, debit_card: { balance: @debit_card.balance, deposits: @debit_card.deposits, transaction_number: @debit_card.transaction_number, withdraws: @debit_card.withdraws }
+      post :create, debit_card: { deposits: @debit_card.deposits, withdraws: @debit_card.withdraws }
     end
 
     assert_redirected_to debit_card_path(assigns(:debit_card))
@@ -35,7 +35,7 @@ class DebitCardsControllerTest < ActionController::TestCase
   end
 
   test "should update debit_card" do
-    patch :update, id: @debit_card, debit_card: { balance: @debit_card.balance, deposits: @debit_card.deposits, transaction_number: @debit_card.transaction_number, withdraws: @debit_card.withdraws }
+    patch :update, id: @debit_card, debit_card: { deposits: @debit_card.deposits, withdraws: @debit_card.withdraws }
     assert_redirected_to debit_card_path(assigns(:debit_card))
   end
 
