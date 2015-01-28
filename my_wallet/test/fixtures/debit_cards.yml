@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  deposits: 1.5
+  withdraws: 1.5
+  balance: 1.5
+
+two:
+  deposits: 1.5
+  withdraws: 1.5
+  balance: 1.5
